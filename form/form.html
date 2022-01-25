@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./formStyle.css">
+    
+</head>
+<body>
+    <div class="formContainer">
+        <form action="" name="form" onsubmit="return validateForm()">
+            <div class="header">Can you please provide your personal details?</div>
+            
+            <div class="container">
+                <div class="text">Name</div>
+                <input type="text" class="field" name="name" required>
+            </div>
+     
+            <div class="container">
+                <div class="text">Date of birth</div>
+                <input type="date" class="field" name="date">
+            </div>
+    
+            <div class="container">
+                <div class="text">Contact Number</div>
+                <input type="number" class="field" name="number">
+            </div>
+    
+            <div class="container">
+                <div class="text">Country</div>
+                <select name="countries" id="countries" class="field" onchange="fillState(this.id, 'states')" required>
+                    
+                </select>
+            </div class="container">
+    
+            <div class="container">
+                <div class="text">State</div>
+                <select name="states" id="states" class="field" required>
+                </select>
+            </div>
+    
+            <div class="container">
+                <div class="text">Your email</div>
+                <input type="email" class="field" name="email">
+            </div>
+    
+            <div>
+                <input type="submit" id="button">
+            </div>
+            
+        </form>
+    </div>
+    <div id="message"></div>
+    
+</body>
+<script src="./script.js"></script>
+</html>
